@@ -1,9 +1,8 @@
-
 class Dog
 
     def initialize(sound, first_name, last_name)
         @sound = sound
-        self.first_name = first_name
+        @first_name = first_name
         @last_name = last_name
     end
 
@@ -12,29 +11,12 @@ class Dog
     end
 
     def bark
-        puts "#{@sound}, My name is #{self.full_name}!"
-    end
-
-    def first_name
-        return @first_name
-    end
-
-    def first_name=(new_name)
-        if(new_name.length < 10)
-            @first_name = new_name
-        else
-            puts "Thats too long for a dogs name"
-        end
+        puts "#{@sound}, My name is __!"
     end
 
 end
 
 
-tilly = Dog.new('Woof', 'Tilly', 'Miles')
-
-tess = Dog.new('Arf', 'Tess', 'Miles')
-
-annie = Dog.new('Yip', 'Annie', 'Miles')
-
+tilly = Dog.new('Tilly', 'Miles')
 
 puts tilly.full_name
