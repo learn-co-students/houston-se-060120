@@ -1,0 +1,8 @@
+<h1><%= @dog.name %></h1>
+<strong><%= @dog.age %> Years Old</strong>
+<img style="width: 100px" src="<%= @dog.img_url %>" />
+
+<form method="post" action="/remove/<%= @dog.id %>">
+    <input type="hidden" name="_method" value="delete">
+    <input type="submit" value="Remove Dog" >
+</form>
