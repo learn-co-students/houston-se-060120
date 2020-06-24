@@ -1,0 +1,19 @@
+<form method="POST" action="/create-dog" >
+    <div>
+        <label>Name</label>
+        <input name="dog_name" type="text" />
+    </div>
+    <div>
+        <label>Image URL</label>
+        <input name="dog_image" type="text" />
+    </div>
+    <div>
+        <label>Breed ID</label>
+        <select name="dog_breed_id">
+            <% @all_breeds.each do | breed | %>
+                <option value="<%= breed.id %>"><%= breed.name %></option>
+            <% end %>
+        </select>
+    </div>
+    <input type="submit">
+</form>
